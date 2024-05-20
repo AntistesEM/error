@@ -1,0 +1,143 @@
+[00:00:00] Build started
+[00:00:02] git clone -q --branch=main https://github.com/AntistesEM/ahj-homeworks_http-frontend.git /home/appveyor/projects/ahj-homeworks-http-frontend
+[00:00:03] git checkout -qf 678ad7a0e72ebd8184b0735475c1fdadb0e053a8
+[00:00:04] Configuring 'stack'
+[00:00:04] Enabling Node 18
+[00:00:04] Downloading and installing node v18.20.2...
+[00:00:04] Downloading https://nodejs.org/dist/v18.20.2/node-v18.20.2-linux-x64.tar.xz...
+[00:00:04] 
+[00:00:04]                                                                            0.2%
+[00:00:05] ##                                                                         4.0%
+[00:00:05] #############################                                             40.9%
+[00:00:05] #################################################################         90.3%
+[00:00:05] ######################################################################## 100.0%
+[00:00:05] Computing checksum with sha256sum
+[00:00:05] Checksums matched!
+[00:00:08] Now using node v18.20.2 (npm v10.5.0)
+[00:00:08] Running "install" scripts
+[00:00:08] npm install
+[00:00:12] npm WARN ERESOLVE overriding peer dependency
+[00:00:12] npm WARN While resolving: @typescript-eslint/utils@7.8.0
+[00:00:12] npm WARN Found: eslint@9.2.0
+[00:00:12] npm WARN node_modules/eslint
+[00:00:12] npm WARN   dev eslint@"^9.2.0" from the root project
+[00:00:12] npm WARN   4 more (@eslint-community/eslint-utils, ...)
+[00:00:12] npm WARN 
+[00:00:12] npm WARN Could not resolve dependency:
+[00:00:12] npm WARN peer eslint@"^8.56.0" from @typescript-eslint/utils@7.8.0
+[00:00:12] npm WARN node_modules/eslint-plugin-jest/node_modules/@typescript-eslint/utils
+[00:00:12] npm WARN   @typescript-eslint/utils@"^6.0.0 || ^7.0.0" from eslint-plugin-jest@28.5.0
+[00:00:12] npm WARN   node_modules/eslint-plugin-jest
+[00:00:12] npm WARN 
+[00:00:12] npm WARN Conflicting peer dependency: eslint@8.57.0
+[00:00:12] npm WARN node_modules/eslint
+[00:00:12] npm WARN   peer eslint@"^8.56.0" from @typescript-eslint/utils@7.8.0
+[00:00:12] npm WARN   node_modules/eslint-plugin-jest/node_modules/@typescript-eslint/utils
+[00:00:12] npm WARN     @typescript-eslint/utils@"^6.0.0 || ^7.0.0" from eslint-plugin-jest@28.5.0
+[00:00:12] npm WARN     node_modules/eslint-plugin-jest
+[00:00:30] npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+[00:00:30] npm WARN deprecated domexception@4.0.0: Use your platform's native DOMException instead
+[00:00:37] 
+[00:00:37] added 1182 packages, and audited 1183 packages in 29s
+[00:00:37] 
+[00:00:37] 150 packages are looking for funding
+[00:00:37]   run `npm fund` for details
+[00:00:37] 
+[00:00:37] 3 moderate severity vulnerabilities
+[00:00:37] 
+[00:00:37] To address all issues (including breaking changes), run:
+[00:00:37]   npm audit fix --force
+[00:00:37] 
+[00:00:37] Run `npm audit` for details.
+[00:00:37] Running "build_script" scripts
+[00:00:37] npm run build
+[00:00:38] 
+[00:00:38] > webpack5_browser-sync@1.0.0 build
+[00:00:38] > webpack --config webpack.prod.js
+[00:00:38] 
+[00:00:41] assets by path *.png 5.74 KiB
+[00:00:41]   asset 539ebc82116e5dc71aff.png 1.64 KiB [emitted] [immutable] [from: src/img/edit_64.png]
+[00:00:41]   asset ef518e13968dd235a587.png 1.47 KiB [emitted] [immutable] [from: src/img/del_64.png]
+[00:00:41]   asset 1f5627969f6eeb821f77.png 1.44 KiB [emitted] [immutable] [from: src/img/checkbox_yes_64.png]
+[00:00:41]   asset d32e1edf017f2446209b.png 1.2 KiB [emitted] [immutable] [from: src/img/checkbox_not_64.png]
+[00:00:41] assets by chunk 10.2 KiB (name: main)
+[00:00:41]   asset main.js 7.76 KiB [emitted] (name: main)
+[00:00:41]   asset main.css 2.4 KiB [emitted] [minimized] (name: main)
+[00:00:41] asset ./index.html 2.05 KiB [emitted]
+[00:00:41] Entrypoint main 10.2 KiB = main.css 2.4 KiB main.js 7.76 KiB
+[00:00:41] orphan modules 15.6 KiB (javascript) 5.74 KiB (asset) 1.01 KiB (runtime) [orphan] 17 modules
+[00:00:41] cacheable modules 7.63 KiB (javascript) 3.79 KiB (css/mini-extract)
+[00:00:41]   ./src/index.js + 2 modules 7.63 KiB [built] [code generated]
+[00:00:41]   css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css 3.79 KiB [built] [code generated]
+[00:00:41] webpack 5.91.0 compiled successfully in 2416 ms
+[00:00:41] Running "test" phase
+[00:00:44] Running "deploy_script" scripts
+[00:00:44] git config --global credential.helper store
+[00:00:44] git config --global user.name AppVeyor
+[00:00:44] git config --global user.email ci@appveyor.com
+[00:00:44] echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+[00:00:44] npx push-dir --dir=dist --branch=gh-pages --force --verbose
+[00:00:46] npm WARN exec The following package was not found and will be installed: push-dir@0.4.1
+[00:00:47] ignoring unclean git...
+[00:00:47] git --work-tree dist checkout --orphan gh-pages-678ad7a
+[00:00:47] Switched to a new branch 'gh-pages-678ad7a'
+[00:00:47] D	.appveyor.yml
+[00:00:47] D	.babelrc
+[00:00:47] D	.browserslistrc
+[00:00:47] D	.editorconfig
+[00:00:47] D	.eslintignore
+[00:00:47] D	.eslintrc.json
+[00:00:47] D	.github/workflows/web.yml
+[00:00:47] D	.gitignore
+[00:00:47] D	.gitkeep
+[00:00:47] D	.prettierignore
+[00:00:47] D	README.md
+[00:00:47] D	package-lock.json
+[00:00:47] D	package.json
+[00:00:47] D	pic/helpdesk-2.png
+[00:00:47] D	pic/helpdesk-3.png
+[00:00:47] D	pic/helpdesk-4.png
+[00:00:47] D	pic/helpdesk-5.png
+[00:00:47] D	pic/helpdesk.png
+[00:00:47] D	pic/image.png
+[00:00:47] D	src/css/style.css
+[00:00:47] D	src/img/checkbox_not_64.png
+[00:00:47] D	src/img/checkbox_yes_64.png
+[00:00:47] D	src/img/del_16.png
+[00:00:47] D	src/img/del_64.png
+[00:00:47] D	src/img/edit_16.png
+[00:00:47] D	src/img/edit_64.png
+[00:00:47] D	src/img/galochka_not_16.png
+[00:00:47] D	src/img/galochka_yes_16.png
+[00:00:47] D	src/index.html
+[00:00:47] D	src/index.js
+[00:00:47] D	src/js/app.js
+[00:00:47] D	src/js/modal.js
+[00:00:47] D	webpack.common.js
+[00:00:47] D	webpack.dev.js
+[00:00:47] D	webpack.prod.js
+[00:00:47] 
+[00:00:47] 
+[00:00:47] git --work-tree dist add --all
+[00:00:47] 
+[00:00:47] 
+[00:00:47] git --work-tree dist commit -m 678ad7a
+[00:00:47] [gh-pages-678ad7a (root-commit) 1f7e5da] 678ad7a
+[00:00:47]  7 files changed, 230 insertions(+)
+[00:00:47]  create mode 100644 1f5627969f6eeb821f77.png
+[00:00:47]  create mode 100644 539ebc82116e5dc71aff.png
+[00:00:47]  create mode 100644 d32e1edf017f2446209b.png
+[00:00:47]  create mode 100644 ef518e13968dd235a587.png
+[00:00:47]  create mode 100644 index.html
+[00:00:47]  create mode 100644 main.css
+[00:00:47]  create mode 100644 main.js
+[00:00:47] 
+[00:00:47] 
+[00:00:47] git push origin HEAD:gh-pages --force
+[00:00:47] remote: No anonymous write access.
+[00:00:47] fatal: Authentication failed for 'https://github.com/AntistesEM/ahj-homeworks_http-frontend.git/'
+[00:00:47] 
+[00:00:47] 
+[00:00:47] aborted: problem pushing local branch to remote
+[00:00:47] Command exited with code 1
+[00:00:47] Build failed
